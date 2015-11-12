@@ -2079,7 +2079,8 @@
 			}
 
 		.image.avatar {
-			border-radius: 100%;
+			background: rgba(255, 255, 255,0.4);
+			
 		}
 
 			.image.avatar:before {
@@ -2087,8 +2088,13 @@
 			}
 
 			.image.avatar img {
-				border-radius: 100%;
 				width: 100%;
+			}
+
+			.image.avatar:hover {
+				background: rgba(255, 255, 255,0.7);
+				-webkit-transition: background 0.4s ease-in-out;
+				transition: background 0.4s ease-in-out;
 			}
 
 /* List */
@@ -2500,8 +2506,8 @@
 		}
 
 		#header .image.avatar {
-			margin: 0 0 1em 0;
-			width: 6.25em;
+			margin: 0 0 0em 0;
+			width: 14.25em;
 		}
 
 /* Footer */

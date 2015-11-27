@@ -1,0 +1,41 @@
+{{ $baseurl := .Site.BaseURL }}
+{{ partial "head" . }}
+{{ partial "header" . }}
+
+<section class = "content">
+  <article>
+    <h1>{{ .Title }}</h1>
+    {{ partial "share" . }}
+    <h4 id="date" style = "display:inline"> {{ .Date.Format "Mon Jan 2, 2006" }} | </h4>
+    <i class="fa fa-tags"></i>
+    <ul  class = "list-inline" style = "display:inline">
+      {{ range .Params.tags }}
+        <li><a href="tags/{{ . | urlize }}">{{ . }}</a> </li>
+      {{ end }}
+    </ul>
+    <small> | {{ .WordCount }} Words</small>
+    <br>
+
+    {{ .Content }}
+  </article>
+
+  <aside id="meta">
+    <div>
+    <ul id="categories">
+      {{ range .Params.topics }}
+        <li><a href="{{ $baseurl }}/topics/{{ . | urlize }}">{{ . }}</a> </li>
+      {{ end }}
+    </ul>
+    </div>
+    <div>
+        {{ if .Prev }}
+          <a class="previous" href="{{.Prev.Permalink}}"> {{.Prev.Title}}</a>
+        {{ end }}
+        {{ if .Next }}
+          <a class="next" href="{{.Next.Permalink}}"> {{.Next.Title}}</a>
+        {{ end }}
+    </div>
+  </aside>
+</section>
+
+{{ partial "footer" . }}

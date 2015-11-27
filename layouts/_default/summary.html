@@ -1,0 +1,19 @@
+<article class="post">
+	<header>
+		<h2><a href='{{ .Permalink }}'> {{ .Title }}</a> </h2>
+		<h4 id="date" style = "display:inline"> {{ .Date.Format "Mon Jan 2, 2006" }} | </h4>
+	    <i class="fa fa-tags"></i>
+	    <ul  class = "list-inline" style = "display:inline">
+	      {{ range .Params.tags }}
+	        <li><a href="tags/{{ . | urlize }}">{{ . }}</a> </li>
+	      {{ end }}
+	    </ul>
+	    <small> | {{ .WordCount }} Words</small>
+	</header>
+
+	{{ .Summary }}
+
+	<footer>
+	<a href='{{ .Permalink }}'><nobr>Read more →</nobr></a>
+	</footer>
+</article>

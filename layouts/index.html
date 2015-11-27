@@ -1,0 +1,28 @@
+{{ partial "head" . }}
+	<body>
+		{{ partial "header" . }}
+
+		{{ "<!-- Main -->" | safeHTML }}
+		<div id="main">
+			{{ partial "about" . }}
+			<hr>
+			<ul id="list">
+            	{{ range first 10 .Data.Pages }}
+                	{{ .Render "summary" }}
+            	{{ end }}
+        	</ul>
+
+        	<ul id="list2" style = "display:none">
+            	{{ range first 10 .Data.Pages }}
+                	{{ .Render "summary" }}
+            	{{ end }}
+        	</ul>
+
+			{{ partial "portfolio" . }}
+			{{ partial "contact" . }}
+		</div>
+
+		{{ partial "footer" . }}
+
+	</body>
+</html>

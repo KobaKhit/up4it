@@ -1,0 +1,103 @@
+baseurl = "http://kobakhit.com/urbnexpl/"
+languageCode = "en-us"
+title = "UrbnExpl"
+theme = "strata"
+
+contentdir = "content"
+layoutdir = "layouts"
+publishdir = "public"
+canonifyurls = true
+
+[params]
+	# To provide some metadata for search engines feel free to add a few
+    # information about you and your website.
+	name = "urbnexpl"
+	description = "Urban exploration community."
+
+	# Enable Google Analytics by inserting your tracking code
+	googleAnalytics = ""
+
+
+	[params.sidebar]
+		# Replace the avatar with a picture of your own under static/images
+		avatar = "avatar.png"
+		# Use Markdown to format the string. This works nearly all over the theme
+		bio = "We are UrbnExpl, community for urban explorers."
+		# The icons will be shown if you enter your username
+		instagram = "urbnexpl"
+		youtube = "channel/UCZVnAq53z6HItQRk5uZFOTw"
+		# email is further down
+
+		copyright = [
+			"&copy; DXIE & KKHIT",
+			"Design: [HTML5 UP](//html5up.net)",
+			"Images: [Donngzhou Xie](//https://500px.com/timkeenness)",
+			"Created by: [Koba Khit](//http://www.kobakhit.com/)"
+		]
+
+
+	[params.about]
+		title = "URBN EXPL"
+		content = "Urban exploration is the manisfestation of the human's earning to discover the world around him and himself along the way. Pushing one's limits through exploring the concrete jungles is what we are about."
+
+
+	[params.portfolio]
+		title = "Select Works"
+
+		# The images and thumbnails are stored under static/images
+		# Create and change subfolders as you like
+		[[params.portfolio.gallery]]
+			image = "portfolio/1.jpg"
+			thumb = "portfolio/1.jpg"
+			title = "Church"
+			description = "Taken from IHouse, Philly the  U.S."
+
+		[[params.portfolio.gallery]]
+			image = "portfolio/2.jpg"
+			thumb = "portfolio/2.jpg"
+			title = "Rail"
+			description = "Philly, the U.S."
+
+		[[params.portfolio.gallery]]
+			image = "portfolio/3.jpg"
+			thumb = "portfolio/3.jpg"
+			title = "Somewhere in China"
+			description = "China"
+
+		[[params.portfolio.gallery]]
+			image = "portfolio/4.jpg"
+			thumb = "portfolio/4.jpg"
+			title = "Same place"
+			description = "Different time"
+
+	[params.contact]
+		title = "Get In Touch"
+		content = "If you want your work to be featured shoot us an email at urbnexpl@gmail.com"
+
+		address = [
+			"1234 Somewhere Rd.",
+			"Nashville, TN 00000",
+			"United States"
+		]
+		phone = "000-000-0000"
+
+		# Since this template is static, the contact form uses www.formspree.io as a
+		# proxy. The form makes a POST request to their servers to send the actual
+		# email. Visitors can send up to a 1000 emails each month for free.
+	    #
+	    # What you need to do for the setup?
+	    #
+	    # - set your email address under 'email' below
+	    # - upload the generated site to your server
+	    # - send a dummy email yourself to confirm your account
+	    # - click the confirm link in the email from www.formspree.io
+	    # - you're done. Happy mailing!
+		email = "urbnexpl@gmail.com"
+
+		[params.contact.form]
+			# Set custom strings for the form if your native
+			# language isn't English
+			name = "Name"
+			email = "Email"
+			message = "Message"
+			submit = "Send message"

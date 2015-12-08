@@ -11,7 +11,7 @@
 		"><span class="label">Youtube</span></a></li>
 		{{ end }}
 		{{ with .Site.Params.contact.email }}
-		<li><a href="mailto:urbnexpl@gmail.com" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+		<li><a href="mailto:{{ . }}" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
 		{{ end }}
 	</ul>
 
